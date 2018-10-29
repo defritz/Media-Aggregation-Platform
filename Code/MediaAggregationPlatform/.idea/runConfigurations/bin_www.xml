@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="bin\www" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="$USER_HOME$/Documents/GitHub/Media-Aggregation-Platform/Code/MediaAggregationPlatform/bin/www" working-dir="$USER_HOME$/Documents/GitHub/Media-Aggregation-Platform/Code/MediaAggregationPlatform">
+    <envs>
+      <env name="DEBUG" value="mediaaggregationplatform:*" />
+    </envs>
+    <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+      <browser url="http://localhost:3000/" />
+    </EXTENSION>
+    <method v="2" />
+  </configuration>
+</component>
