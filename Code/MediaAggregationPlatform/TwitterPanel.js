@@ -1,10 +1,10 @@
 var Twitter = require('twitter');
 
 var client = new Twitter({
-    consumer_key: 'EV48K9tLsn6g95CyHD2Wx9G60',
-    consumer_secret: 'Tb7YxHB1HZRyNlXHhULpT1dZ0lcpVIslDOtmVCx1S1OWwiL7fz',
-    access_token_key: '550620730-yTdnlcGNE6LsRiN4bddk1uxMEdMmWcZAU6c7wSgF',
-    access_token_secret: 'RnFPVE9EGmKVRf7xB6IdHE6V1NtR9cPwn4yHvFVZZtRdb'
+    consumer_key: process.env.TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 
 // Trending hashtags in the United States

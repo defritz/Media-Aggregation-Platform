@@ -1,7 +1,7 @@
 request.get({
     url: "https://api.nytimes.com/svc/topstories/v2/home.json",
     qs: {
-        'api-key': "4e593db0965b429098b05d078a88fa2b"
+        'api-key': process.env.NYT_API_KEY
     },
 }, function(err, response, body) {
     body = JSON.parse(body);
