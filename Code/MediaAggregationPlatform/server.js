@@ -7,27 +7,35 @@ var client = new Twitter({
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 
-var query;
+var queryArray = new Array();
+var embedLink;
+var oembedFormat = new Array();
+
 // Trending hashtags in the United States
 client.get('https://api.twitter.com/1.1/trends/place.json?id=23424977', function(error, trends) {
     if(error) throw error;
-    query = trends[0].trends[0].query;
+    for(j = 0; j < 3; j++){
+        queryArray.push(trends[0].trends[j].query);
+    }
     //console.log(query);
     //console.log(trends[0].trends[0].name);
     //console.log(trends[0].trends[0].url);
-});
-var embedLink;
-var oembedFormat;
-client.get('search/tweets', {q: '%22Jacob+Wohl%22'}, function(error, tweets, response) {
-    //console.log(tweets);
-    var user = tweets.statuses[0].user.screen_name;
-    user.replace(/\s+/g, '');
-    var id = tweets.statuses[0].id_str;
-    var link = 'https://twitter.com/' + user + '/status/' + id;
-    embedLink = 'https://publish.twitter.com/oembed?url=' + link;
+    queryArray.forEach(function(query)
+    {
+        client.get('search/tweets', {q: query}, function (error, tweets, response) {
+            //console.log(tweets);
+            for (i = 0; i < 3; i++) {
+                var user = tweets.statuses[i].user.screen_name;
+                user.replace(/\s+/g, '');
+                var id = tweets.statuses[i].id_str;
+                var link = 'https://twitter.com/' + user + '/status/' + id;
+                embedLink = 'https://publish.twitter.com/oembed?url=' + link;
 
-    client.get(embedLink, function(error, embed) {
-        oembedFormat = embed.html;
+                client.get(embedLink, function (error, embed) {
+                    oembedFormat.push(embed.html);
+                });
+            }
+        });
     });
 });
 
@@ -43,6 +51,17 @@ fs.readFile('./index.html', function (err, html) {
     http.createServer(function(request, response) {
         response.writeHeader(200, {"Content-Type": "text/html"});
         response.write(html);
-        response.end(oembedFormat);
+
+        // Displays the oembed formatted Tweets
+        oembedFormat.forEach(function(entry) {
+            response.write('<html>');
+            response.write('<body>');
+            response.write('<h1>Tweet:</h1>');
+            response.write(entry);
+            response.write('</body>');
+            response.write('</html>');
+        });
+
+        response.end();
     }).listen(PORT);
 });
