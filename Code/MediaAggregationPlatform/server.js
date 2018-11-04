@@ -1,4 +1,10 @@
+const app = require('./app');
+var pug = require('pug');
+
 var Twitter = require('twitter');
+
+var express = require('express');
+var path = require('path');
 
 var client = new Twitter({
     consumer_key: process.env.TWITTER_CONSUMER_KEY,
@@ -33,12 +39,18 @@ client.get('https://api.twitter.com/1.1/trends/place.json?id=23424977', function
 
                 client.get(embedLink, function (error, embed) {
                     oembedFormat.push(embed.html);
+                    //var html = pug.renderFile('./views/index.pug', {posts : './index.html' , pageTitle : 'Test'});
+                    //console.log('html : ' , html);
                 });
             }
         });
     });
 });
-
+/*
+const server = app.listen(3000, () => {
+    console.log(`Express is running on port ${server.address().port}`);
+});
+*/
 var http = require('http');
 var fs = require('fs');
 
@@ -65,3 +77,22 @@ fs.readFile('./index.html', function (err, html) {
         response.end();
     }).listen(PORT);
 });
+
+/*
+app.get('/', function(req, resp) {
+    resp.writeHeader(200, {"Content-Type": "text/html"});
+
+    // Displays the oembed formatted Tweets
+    oembedFormat.forEach(function(entry) {
+        resp.write('<html>');
+        resp.write('<body>');
+        resp.write('<h1>Tweet:</h1>');
+        resp.write(entry);
+        resp.write('</body>');
+        resp.write('</html>');
+    });
+
+    resp.end();
+});
+app.listen(3000);
+*/
