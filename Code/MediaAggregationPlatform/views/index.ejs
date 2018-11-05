@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head %>
+</head>
+<body>
+<% include partials/menu %>
+<div class="container-fluid bg-3 text-center">
+    <h3><%= page %></h3><br>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <p>Welcome to our media aggregation demo, below you can find a curated collection of popular new and media articles.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h3><%- topic1 %></h3>
+        </div>
+        <div class="col-sm-4">
+            <h3><%- topic2 %></h3>
+        </div>
+        <div class="col-sm-4">
+            <h3><%- topic3 %></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <%- tweets1 %>
+        </div>
+        <div class="col-sm-4">
+            <%- tweets2 %>
+        </div>
+        <div class="col-sm-4">
+            <%- tweets3 %>
+        </div>
+    </div>
+</div>
+</body>
+<% include partials/script %>
+</html>

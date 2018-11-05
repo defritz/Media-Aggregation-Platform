@@ -10,7 +10,7 @@ setTimeout(function() {
 
 function getHomePage() {
   router.get('/', function(req, res, next) {
-      res.render('index', { title: 'Twitter Display Demo', tweets: statusArray });
+      //res.render('index', { title: 'Twitter Display Demo', tweets: statusArray });
   });
 }
 

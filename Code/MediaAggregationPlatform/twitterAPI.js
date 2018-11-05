@@ -9,16 +9,17 @@ const client = new Twitter({
 
 var getTweets = function getTweets() {
     var queryArray = new Array();
-    var embedLink;
-    var oembedFormat = new Array();
-    var statusArray = [];
+    var oembedFormatArray = new Array();
+    var topicArray = new Array();
+    var topicsTweets = [topicArray, oembedFormatArray];
 
 // Trending hashtags in the United States
     client.get('https://api.twitter.com/1.1/trends/place.json?id=23424977', function(error, trends) {
         if(error) throw error;
         // Get top three trending topics
-        for(j = 0; j < 3; j++){
-            queryArray.push(trends[0].trends[j].query);
+        for(i = 0; i < 3; i++){
+            topicArray.push(trends[0].trends[i].name);
+            queryArray.push(trends[0].trends[i].query);
         }
         //console.log(query);
         //console.log(trends[0].trends[0].name);
@@ -32,18 +33,16 @@ var getTweets = function getTweets() {
                     user.replace(/\s+/g, '');
                     var id = tweets.statuses[i].id_str;
                     var link = 'https://twitter.com/' + user + '/status/' + id;
-                    embedLink = 'https://publish.twitter.com/oembed?url=' + link;
-
-                    statusArray.push(tweets.statuses[i].text);
+                    var embedLink = 'https://publish.twitter.com/oembed?url=' + link;
 
                     client.get(embedLink, function (error, embed) {
-                        oembedFormat.push(embed.html);
+                        oembedFormatArray.push(embed.html);
                     });
                 }
             });
         });
     });
-    return statusArray;
+    return topicsTweets;
 }
 
 exports.getTweets = getTweets;

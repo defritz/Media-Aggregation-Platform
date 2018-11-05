@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f7668c7-d168-4a25-8e0c-1ade104113b4" name="Default Changelist" comment="Now displays a random tweet involving the selected trending topic">
-      <change afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/twitterAPI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ytdisplay.js" afterDir="false" />
+    <list default="true" id="7f7668c7-d168-4a25-8e0c-1ade104113b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/partials/head.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/partials/menu.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/partials/script.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaAggregationPlatform.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitterAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/twitterAPI.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -78,48 +82,52 @@
     <session id="-1714042678">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
-          <entry key="project.open.time.3" value="4" />
-          <entry key="project.open.time.4" value="5" />
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.3" value="5" />
+          <entry key="project.open.time.4" value="6" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="ejs" value="361" />
           <entry key="html" value="443" />
-          <entry key="js" value="4245" />
+          <entry key="js" value="4917" />
           <entry key="json" value="9" />
           <entry key="pug" value="366" />
-          <entry key="txt" value="101" />
+          <entry key="txt" value="167" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="EJS" value="361" />
           <entry key="HTML" value="443" />
           <entry key="JSON" value="9" />
           <entry key="Jade" value="366" />
-          <entry key="JavaScript" value="4245" />
-          <entry key="PLAIN_TEXT" value="101" />
+          <entry key="JavaScript" value="4917" />
+          <entry key="PLAIN_TEXT" value="167" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Spotify and Youtube API" value="1" />
-          <entry key="css" value="2" />
-          <entry key="html" value="3" />
-          <entry key="js" value="17" />
+          <entry key="css" value="5" />
+          <entry key="ejs" value="7" />
+          <entry key="html" value="4" />
+          <entry key="js" value="22" />
           <entry key="json" value="1" />
-          <entry key="pug" value="8" />
+          <entry key="pug" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="2" />
-          <entry key="HTML" value="3" />
+          <entry key="CSS" value="5" />
+          <entry key="EJS" value="7" />
+          <entry key="HTML" value="4" />
           <entry key="JSON" value="1" />
-          <entry key="Jade" value="8" />
-          <entry key="JavaScript" value="17" />
+          <entry key="Jade" value="11" />
+          <entry key="JavaScript" value="22" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -130,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+            <state relative-caret-position="520">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -139,26 +147,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            <state relative-caret-position="500">
+              <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,17 +159,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/twitterAPI.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+            <state relative-caret-position="220">
+              <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/layout.pug">
+        <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <state relative-caret-position="240">
+              <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -216,13 +218,21 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/ytdisplay.js" />
         <option value="$PROJECT_DIR$/config.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/layout.pug" />
         <option value="$PROJECT_DIR$/views/index.pug" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/views/header.ejs" />
+        <option value="$PROJECT_DIR$/views/menu.ejs" />
+        <option value="$PROJECT_DIR$/views/script.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/views/head.ejs" />
+        <option value="$PROJECT_DIR$/views/partials/script.ejs" />
+        <option value="$PROJECT_DIR$/views/partials/menu.ejs" />
+        <option value="$PROJECT_DIR$/views/partials/head.ejs" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/twitterAPI.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -252,6 +262,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,12 +273,24 @@
             <path>
               <item name="MediaAggregationPlatform" type="b2602c69:ProjectViewProjectNode" />
               <item name="MediaAggregationPlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MediaAggregationPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MediaAggregationPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MediaAggregationPlatform" type="b2602c69:ProjectViewProjectNode" />
               <item name="MediaAggregationPlatform" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MediaAggregationPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MediaAggregationPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MediaAggregationPlatform" type="b2602c69:ProjectViewProjectNode" />
@@ -277,7 +300,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,14 +315,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\derek\Documents\GitHub\Media-Aggregation-Platform\Code\MediaAggregationPlatform\views" />
-      <recent name="C:\Users\derek\WebstormProjects\MediaAggregationPlatform" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\derek\Documents\GitHub\Media-Aggregation-Platform\Code\MediaAggregationPlatform\views\partials" />
       <recent name="C:\Users\derek\Documents\GitHub\Media-Aggregation-Platform\Code" />
       <recent name="C:\Users\derek\Documents\GitHub\Media-Aggregation-Platform\MediaAggregationPlatform" />
       <recent name="C:\Users\derek\Documents\GitHub\Media-Aggregation-Platform" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\derek\Documents\GitHub\Media-Aggregation-Platform\Code\MediaAggregationPlatform\views" />
+      <recent name="C:\Users\derek\WebstormProjects\MediaAggregationPlatform" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -367,7 +390,9 @@
       <workItem from="1541267681602" duration="169000" />
       <workItem from="1541267884141" duration="280000" />
       <workItem from="1541352340562" duration="2645000" />
-      <workItem from="1541373536681" duration="8486000" />
+      <workItem from="1541373536681" duration="8627000" />
+      <workItem from="1541393815312" duration="716000" />
+      <workItem from="1541447929474" duration="5229000" />
     </task>
     <task id="LOCAL-00001" summary="Now displays a random tweet involving the selected trending topic">
       <created>1540941221759</created>
@@ -383,11 +408,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540950305218</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Cleaned up code, converted twitter display to Pug formatting">
+      <created>1541382119726</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1541382119726</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42126000" />
+    <option name="totallyTimeSpent" value="48212000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -402,8 +434,8 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6741405" visible="true" weight="0.15173867" />
-      <window_info id="Structure" order="1" sideWeight="0.3258595" side_tool="true" visible="true" weight="0.15173867" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.671151" visible="true" weight="0.15173867" />
+      <window_info id="Structure" order="1" sideWeight="0.32884902" side_tool="true" visible="true" weight="0.15173867" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -417,7 +449,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.18546638" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.27440348" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.20824295" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -457,7 +489,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Now displays a random tweet involving the selected trending topic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now displays a random tweet involving the selected trending topic" />
+    <MESSAGE value="Cleaned up code, converted twitter display to Pug formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up code, converted twitter display to Pug formatting" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../../MediaAggregationPlatform/client_secret.json" />
@@ -506,34 +539,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/YTAPI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.pug">
+    <entry file="file://$PROJECT_DIR$/YTAPI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        <state relative-caret-position="120">
+          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -544,31 +556,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/twitterAPI.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+        <state relative-caret-position="240">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/views/partials/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        <state relative-caret-position="40">
+          <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/script.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/error.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/head.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/menu.ejs">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
-          <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+          <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitterAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="500">
+          <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
