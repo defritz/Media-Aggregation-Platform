@@ -1,17 +1,4 @@
-/*
 const app = require('./app');
-var pug = require('pug');
-
-var express = require('express');
-var path = require('path');
-*/
-
-const express = require('express');
-const app = express()
-
-app.use(express.static('public'));
-app.set('view engine', 'ejs')
-
 var twitter = require('./twitterAPI');
 
 tweetArray = twitter.getTweets();
