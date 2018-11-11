@@ -2,6 +2,9 @@
 
 Welcome to the github page for our Media Aggregation Platform project. This is a group endeavor as part of our Software Engineering II course, in which we are expected to undergo the different phases of software development. Here you can find our project documentation, including our requirement analysis and sprint planning.
 
+## Site Page
+[Click here to visit our page!](http://mediaaggregationplatform-env.bij2vsvze9.us-east-2.elasticbeanstalk.com/)
+
 ## Team Members
 
 * [Derek Fritz](https://github.com/defritz)
