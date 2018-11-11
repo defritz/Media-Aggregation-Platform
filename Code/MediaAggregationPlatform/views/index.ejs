@@ -11,17 +11,27 @@
         <div class="col-sm-4"></div>
         <div class="col-sm-4">
             <p>Welcome to our media aggregation demo, below you can find a curated collection of popular new and media articles.</p>
+            <p>Please select the media source you would like to browse below.</p>
+            <form action="/" method="post">
+                <select name="list" id="list">
+                    <option value="twitter">Twitter</option>
+                    <option value="nytimes">New York Times</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="spotify">Spotify</option>
+                </select>
+                <input type="submit" class="ghost-button" value="Submit">
+            </form>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-4">
-            <h3><%- topic1 %></h3>
+            <h2><%- topic1 %></h2>
         </div>
         <div class="col-sm-4">
-            <h3><%- topic2 %></h3>
+            <h2><%- topic2 %></h2>
         </div>
         <div class="col-sm-4">
-            <h3><%- topic3 %></h3>
+            <h2><%- topic3 %></h2>
         </div>
     </div>
     <div class="row">

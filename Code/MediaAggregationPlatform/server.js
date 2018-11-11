@@ -1,17 +1,6 @@
-/*
+// !! CURRENTLY NOT IN-USE, FUNCTIONALITY HAS BEEN MOVED INTO APP.JS !!
+
 const app = require('./app');
-var pug = require('pug');
-
-var express = require('express');
-var path = require('path');
-*/
-
-const express = require('express');
-const app = express()
-
-app.use(express.static('public'));
-app.set('view engine', 'ejs')
-
 var twitter = require('./twitterAPI');
 
 tweetArray = twitter.getTweets();
@@ -23,7 +12,7 @@ setTimeout(function() {
 
 function startServer() {
     app.get('/', function(req, res) {
-        res.render('index', {page: 'Home', menuId: 'home',
+        res.render('index.ejs', {page: 'Home', menuId: 'home',
             topic1: tweetArray[0][0], topic2: tweetArray[0][1], topic3: tweetArray[0][2],
             tweets1: tweetArray[1].slice(0,3), tweets2: tweetArray[1].slice(3,6), tweets3: tweetArray[1].slice(6,9) });
     });
@@ -31,6 +20,7 @@ function startServer() {
         console.log("Listening on http://localhost:3000");
     })
 }
+
 
 // Server method #2
 /*
