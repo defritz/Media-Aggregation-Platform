@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var twitter = require('./twitterAPI');
 
 //var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
@@ -21,7 +22,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static('public'));
+// Retrieve and display tweets
+tweetArray = twitter.getTweets();
+
+app.get('/', function(req, res) {
+    res.render('index.ejs', {page: 'Home', menuId: 'home',
+        topic1: tweetArray[0][0], topic2: tweetArray[0][1], topic3: tweetArray[0][2],
+        tweets1: tweetArray[1].slice(0,3), tweets2: tweetArray[1].slice(3,6), tweets3: tweetArray[1].slice(6,9) });
+});
+app.listen(3000, function(){
+    console.log("Listening on http://localhost:3000");
+})
 
 /*
 // catch 404 and forward to error handler

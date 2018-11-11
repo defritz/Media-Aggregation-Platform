@@ -21,6 +21,7 @@
     "twitter": "^1.7.1"
   },
   "devDependencies": {
+    "@types/express": "^4.16.0",
     "nodemon": "^1.18.5"
   }
 }
