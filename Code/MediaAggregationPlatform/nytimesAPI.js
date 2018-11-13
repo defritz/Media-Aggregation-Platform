@@ -4,8 +4,8 @@ NYT.key(process.env.NYTIMES_API_KEY);
 var getNews = function getNews() {
     var titleArray = new Array();
     var abstractArray = new Array();
-    var imageArray = new Array();
-    var articlesImages = [titleArray, abstractArray, imageArray];
+    var urlArray = new Array();
+    var articleInfo = [titleArray, abstractArray, urlArray];
 
     NYT.section('world', function(err, data) {
         if(err){
@@ -13,14 +13,14 @@ var getNews = function getNews() {
         }
         else{
             var results = data.results;
-            titleArray.push(results[0].title);
-            abstractArray.push(results[0].abstract);
-            imageArray.push(results[0].multimedia[0].url);
-            //body = JSON.parse(body);
-            //console.log(body);
+            for(i = 0; i < 9; i++){
+                titleArray.push(results[i].title);
+                abstractArray.push(results[i].abstract);
+                urlArray.push(results[i].url);
+            }
         }
     })
-    return articlesImages;
+    return articleInfo;
 }
 
 exports.getNews = getNews;

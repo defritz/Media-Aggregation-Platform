@@ -13,19 +13,15 @@ var getTweets = function getTweets() {
     var topicArray = new Array();
     var topicsTweets = [topicArray, oembedFormatArray];
 
-// Trending hashtags in the United States
+    // Trending topics in the United States
     client.get('https://api.twitter.com/1.1/trends/place.json?id=23424977', function(error, trends) {
         if(error) throw error;
         // Get top three trending topics
         for(i = 0; i < 3; i++){
             topicArray.push(trends[0].trends[i].name);
-            queryArray.push(trends[0].trends[i].query);
-        }
-        //console.log(query);
-        //console.log(trends[0].trends[0].name);
-        //console.log(trends[0].trends[0].url);
-        queryArray.forEach(function(query)
-        {
+            var query = trends[0].trends[i].query;
+            queryArray.push(query);
+
             client.get('search/tweets', {q: query}, function (error, tweets, response) {
                 // Get three tweets from each topic
                 for (i = 0; i < 3; i++) {
@@ -40,6 +36,10 @@ var getTweets = function getTweets() {
                     });
                 }
             });
+        }
+        queryArray.forEach(function(query)
+        {
+
         });
     });
     return topicsTweets;

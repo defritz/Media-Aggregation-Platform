@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head %>
+</head>
+<body>
+<% include partials/menu %>
+<div class="container-fluid bg-3 text-center">
+    <h3><%= page %></h3><br>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <p>Welcome to our media aggregation demo, below you can find a curated collection of popular new and media articles.</p>
+            <p>Please select the media source you would like to browse below.</p>
+            <form action="/" method="post">
+                <select name="list" id="list">
+                    <option value="twitter">Twitter</option>
+                    <option value="nytimes">New York Times</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="spotify">Spotify</option>
+                </select>
+                <input type="submit" class="ghost-button" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h2><%- title1 %></h2>
+            <p><%- abstract1 %></p>
+            <p></p>
+            <a href=<%- url1 -%>>Read More</a>
+        </div>
+        <div class="col-sm-4">
+            <h2><%- title2 %></h2>
+            <p><%- abstract2 %></p>
+            <p></p>
+            <a href=<%- url2 -%>>Read More</a>
+        </div>
+        <div class="col-sm-4">
+            <h2><%- title3 %></h2>
+            <p><%- abstract3 %></p>
+            <p></p>
+            <a href=<%- url3 -%>>Read More</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h2><%- title4 %></h2>
+            <p><%- abstract4 %></p>
+            <p></p>
+            <a href=<%- url4 -%>>Read More</a>
+        </div>
+        <div class="col-sm-4">
+            <h2><%- title5 %></h2>
+            <p><%- abstract5 %></p>
+            <p></p>
+            <a href=<%- url5 -%>>Read More</a>
+        </div>
+        <div class="col-sm-4">
+            <h2><%- title6 %></h2>
+            <p><%- abstract6 %></p>
+            <p></p>
+            <a href=<%- url6 -%>>Read More</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h2><%- title7 %></h2>
+            <p><%- abstract7 %></p>
+            <p></p>
+            <a href=<%- url7 -%>>Read More</a>
+        </div>
+        <div class="col-sm-4">
+            <h2><%- title8 %></h2>
+            <p><%- abstract8 %></p>
+            <p></p>
+            <a href=<%- url8 -%>>Read More</a>
+        </div>
+        <div class="col-sm-4">
+            <h2><%- title9 %></h2>
+            <p><%- abstract9 %></p>
+            <p></p>
+            <a href=<%- url9 -%>>Read More</a>
+        </div>
+    </div>
+</div>
+</body>
+<% include partials/script %>
+</html>
