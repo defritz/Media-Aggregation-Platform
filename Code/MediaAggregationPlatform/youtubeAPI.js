@@ -1,6 +1,6 @@
 var getVideos = function getVideos() {
     const YouTube = require('simple-youtube-api');
-    const youtube = new YouTube('AIzaSyBZcXUmrlUlMm7465BOGLQwZ-TyEtYY9LU');
+    const youtube = new YouTube(process.env.YOUTUBE_API_KEY);
 
     var videoArray = new Array();
 
