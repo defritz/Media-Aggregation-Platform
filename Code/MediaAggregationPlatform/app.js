@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var twitter = require('./twitterAPI');
 var nytimes = require('./nytimesAPI');
+var youtube = require('./YTAPI');
 
 //var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
@@ -28,11 +29,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Arrays for storing latest news and media
 var tweetArray;
 var newsArray;
+var vidArray;
 
 app.get('/', function(req, res) {
     res.render('indexHome.ejs', {page: 'Home', menuId: 'home'});
-    tweetArray = twitter.getTweets();
-    newsArray = nytimes.getNews();
+    //tweetArray = twitter.getTweets();
+    //newsArray = nytimes.getNews();
+    youtube.getVideo();
 });
 app.post('/', function(req, res) {
     var selectVal = req.body.list;
