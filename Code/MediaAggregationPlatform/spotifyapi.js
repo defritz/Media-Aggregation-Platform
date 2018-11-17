@@ -1,59 +1,49 @@
-var SpotifyWebApi = require('./spotify-web-api');
-//var grantCredentials = require('get-spotify-client-credentials');
+var request = require('request'); // "Request" library
 
-//var SpotifyWebApi = require('../');
+var client_id = '3d66ac1c2793421484d1bd58e68c5ab4'; // Your client id
+var client_secret = '55ef9bdab2f948a98c25304532655a5f'; // Your secret
 
-//SpotifyWebAPI.SpotifyWebApi;
-/**
- * This example retrieves the top tracks for an artist.
- * https://developer.spotify.com/spotify-web-api/get-artists-top-tracks/
- */
+var oEmbedArray = new Array();
 
-/**
- * This endpoint doesn't require an access token, but it's beneficial to use one as it
- * gives the application a higher rate limit.
- *
- * Since it's not necessary to get an access token connected to a specific user, this example
- * uses the Client Credentials flow. This flow uses only the client ID and the client secret.
- * https://developer.spotify.com/spotify-web-api/authorization-guide/#client_credentials_flow
- */
-var spotifyApi = new SpotifyWebApi({
-  clientId: '3d66ac1c2793421484d1bd58e68c5ab4',
-  clientSecret: '55ef9bdab2f948a98c25304532655a5f'
+// your application requests authorization
+var authOptions = {
+    url: 'https://accounts.spotify.com/api/token',
+    headers: {
+        'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
+    },
+    form: {
+        grant_type: 'client_credentials'
+    },
+    json: true
+};
+
+request.post(authOptions, function(error, response, body) {
+    if (!error && response.statusCode === 200) {
+
+        // use the access token to access the Spotify Web API
+        var token = body.access_token;
+        var options = {
+            url: 'https://api.spotify.com/v1/playlists/37i9dQZEVXbLRQDuF5jeBp/tracks?market=US&fields=items(track(popularity)%2C%20track(name))&limit=10',
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
+            json: true
+        };
+        request.get(options, function(error, response, body) {
+            /*
+            console.log(body);
+            */
+        });
+    }
 });
 
+var getTracks = function getTracks(){
+    oEmbedArray[0] = '<iframe src="https://open.spotify.com/embed/user/spotifycharts/playlist/37i9dQZEVXbLRQDuF5jeBp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
+    oEmbedArray[1] = '<iframe src="https://open.spotify.com/embed/user/selahrose726/playlist/3O9SfP3rrfbHFnMKEF0x3C" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
+    for (i = 0; i < 2; i++){
+        console.log(oEmbedArray[i]);
+    }
+    return oEmbedArray;
+}
 
-// Retrieve an access token
-spotifyApi.clientCredentialsGrant().then(function(data) {
-    // Set the access token on the API object so that it's used in all future requests
-    spotifyApi.setAccessToken(data.body['access_token']);
-
-    // Get the most popular tracks from the Popular Playlist
-    return spotifyApi.getPlaylistTracks('31ymdYCITDnZRtkKzP3Itp');
-  })
-  .then(function(data) {
-    console.log('The most popular tracks are');
-    console.log('Drum roll..');
-    console.log('...');
-
-    /*
-     * 1. Space Oddity - 2009 Digital Remaster (popularity is 51)
-     * 2. Heroes - 1999 Digital Remaster (popularity is 33)
-     * 3. Let's Dance - 1999 Digital Remaster (popularity is 20)
-     * 4. ...
-    */
-    data.body.tracks.forEach(function(track, index) {
-      console.log(
-        index +
-          1 +
-          '. ' +
-          track.name +
-          ' (popularity is ' +
-          track.popularity +
-          ')'
-      );
-    });
-  })
-  .catch(function(err) {
-    console.log('Unfortunately, something has gone wrong.', err.message);
-  });
+exports.getTracks = getTracks;
