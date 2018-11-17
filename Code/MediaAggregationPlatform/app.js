@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var twitter = require('./twitterAPI');
 var nytimes = require('./nytimesAPI');
-var youtube = require('./YTAPI');
+var youtube = require('./youtubeAPI');
 
 //var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
@@ -29,13 +29,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Arrays for storing latest news and media
 var tweetArray;
 var newsArray;
-var vidArray;
+var videosArray;
 
 app.get('/', function(req, res) {
     res.render('indexHome.ejs', {page: 'Home', menuId: 'home'});
-    //tweetArray = twitter.getTweets();
+    tweetArray = twitter.getTweets();
     //newsArray = nytimes.getNews();
-    youtube.getVideo();
+    videosArray = youtube.getVideos();
 });
 app.post('/', function(req, res) {
     var selectVal = req.body.list;
@@ -66,7 +66,11 @@ app.post('/', function(req, res) {
             newsArray = nytimes.getNews();
             break;
         case 'youtube':
-            res.render('indexYT.ejs', {page: 'Home', menuId: 'home'});
+            res.render('indexYT.ejs', {page: 'Home', menuId: 'home',
+                video1: videosArray[0], video2: videosArray[1], video3: videosArray[2],
+                video4: videosArray[3], video5: videosArray[4], video6: videosArray[5],
+                video7: videosArray[6], video8: videosArray[7], video9: videosArray[8]
+            });
             break;
         case 'spotify':
             res.render('indexSpotify.ejs', {page: 'Home', menuId: 'home'});
