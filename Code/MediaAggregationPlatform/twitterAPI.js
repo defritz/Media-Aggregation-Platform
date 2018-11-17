@@ -37,10 +37,6 @@ var getTweets = function getTweets() {
                 }
             });
         }
-        queryArray.forEach(function(query)
-        {
-
-        });
     });
     return topicsTweets;
 }

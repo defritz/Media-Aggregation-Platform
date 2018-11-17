@@ -41,7 +41,7 @@ var getTracks = function getTracks(){
     oEmbedArray[0] = '<iframe src="https://open.spotify.com/embed/user/spotifycharts/playlist/37i9dQZEVXbLRQDuF5jeBp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
     oEmbedArray[1] = '<iframe src="https://open.spotify.com/embed/user/selahrose726/playlist/3O9SfP3rrfbHFnMKEF0x3C" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
     for (i = 0; i < 2; i++){
-        console.log(oEmbedArray[i]);
+        //console.log(oEmbedArray[i]);
     }
     return oEmbedArray;
 }

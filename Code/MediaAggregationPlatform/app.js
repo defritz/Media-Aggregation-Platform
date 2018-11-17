@@ -7,12 +7,7 @@ var logger = require('morgan');
 var twitter = require('./twitterAPI');
 var nytimes = require('./nytimesAPI');
 var youtube = require('./YTAPI');
-var spotify = require('/spotifyapi');
-
-//var indexRouter = require('./routes/index');
-//var usersRouter = require('./routes/users');
-//app.use('/', indexRouter);
-//app.use('/users', usersRouter);
+var spotify = require('./spotifyapi');
 
 var app = express();
 
@@ -36,7 +31,7 @@ var songsArray;
 app.get('/', function(req, res) {
     res.render('indexHome.ejs', {page: 'Home', menuId: 'home'});
     tweetArray = twitter.getTweets();
-    //newsArray = nytimes.getNews();
+    newsArray = nytimes.getNews();
     videosArray = youtube.getVideos();
     songsArray = spotify.getTracks();
 });
@@ -72,9 +67,9 @@ app.post('/', function(req, res) {
             res.render('indexYT.ejs', {page: 'Home', menuId: 'home',
                 video1: videosArray[0], video2: videosArray[1], video3: videosArray[2],
                 video4: videosArray[3], video5: videosArray[4], video6: videosArray[5],
-                video7: videosArray[6], video8: videosArray[7], video9: videosArray[8],
-                video10: videosArray[9]
+                video7: videosArray[6], video8: videosArray[7], video9: videosArray[8]
             });
+            // Update latest videos
             videosArray = youtube.getVideos();
             break;
         case 'spotify':
