@@ -69,8 +69,10 @@ app.post('/', function(req, res) {
             res.render('indexYT.ejs', {page: 'Home', menuId: 'home',
                 video1: videosArray[0], video2: videosArray[1], video3: videosArray[2],
                 video4: videosArray[3], video5: videosArray[4], video6: videosArray[5],
-                video7: videosArray[6], video8: videosArray[7], video9: videosArray[8]
+                video7: videosArray[6], video8: videosArray[7], video9: videosArray[8],
+                video10: videosArray[9]
             });
+            videosArray = youtube.getVideos();
             break;
         case 'spotify':
             res.render('indexSpotify.ejs', {page: 'Home', menuId: 'home'});
