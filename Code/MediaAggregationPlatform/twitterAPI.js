@@ -22,12 +22,12 @@ var getTweets = function getTweets() {
             var query = trends[0].trends[i].query;
             queryArray.push(query);
 
-            client.get('search/tweets', {q: query}, function (error, tweets, response) {
-                // Get three tweets from each topic
-                for (i = 0; i < 3; i++) {
-                    var user = tweets.statuses[i].user.screen_name;
+            client.get('search/tweets', {q: query}, function (error, tweets) {
+                // Get three tweets from the topic
+                for (j = 0; j < 3; j++) {
+                    var user = tweets.statuses[j].user.screen_name;
                     user.replace(/\s+/g, '');
-                    var id = tweets.statuses[i].id_str;
+                    var id = tweets.statuses[j].id_str;
                     var link = 'https://twitter.com/' + user + '/status/' + id;
                     var embedLink = 'https://publish.twitter.com/oembed?url=' + link;
 
@@ -37,6 +37,7 @@ var getTweets = function getTweets() {
                 }
             });
         }
+
     });
     return topicsTweets;
 }
