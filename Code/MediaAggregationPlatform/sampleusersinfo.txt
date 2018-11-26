@@ -1,0 +1,30 @@
+INSERT INTO users VALUE
+     (1, 'Omer', 'Coughlin', 'omer.coughlin@ttu.edu', 'ocoughlin', '+M;*pmC^pq5^CE8]');
+
+INSERT INTO users VALUE
+     (2, 'Jo', 'Charrier', 'joe.charrier@ttu.edu', 'jcharrier', 'r=$&5DA+;2Uc7pn9');
+
+INSERT INTO users VALUE
+     (3, 'Milan', 'Cousins', 'milan.cousins@ttu.edu', 'mcousins', 'fAW6NA[*p%^>5R(C');
+
+INSERT INTO users VALUE
+     (4, 'Karina', 'Shaner', 'karina.shaner@ttu.edu', 'kshaner', '_C&]M#9,9x3TjL(Q');
+
+INSERT INTO users VALUE
+     (5, 'Lori', 'Mendes', 'lori.mendes@ttu.edu', 'lmendes', '?nf7>G4]k.PP:7~4');
+
+INSERT INTO users VALUE
+     (6, 'Wally', 'Cuthbert', 'wally.cuthbert@ttu.edu', 'wcuthbert', 'P\/HDaKd_}a-5LQ;');
+
+INSERT INTO users VALUE
+     (7, 'Damian', 'Grahn', 'damian.grahn@ttu.edu', 'dgrahn', 'Y4M<yBXpk_Ku%6[%');
+
+INSERT INTO users VALUE
+     (8, 'Rosario', 'Mcdougald', 'rosario.mcdougald@ttu.edu', 'rmcdougald', '42qN_HJz;M2w~2]s');
+
+INSERT INTO users VALUE
+     (9, 'Velia', 'Fenster', 'velia.fenster@ttu.edu', 'vfenster', 'sc7UC(H39:!~Bqn%');
+
+INSERT INTO users VALUE
+     (10, 'Christy', 'Perkins', 'christy.perkins@ttu.edu', 'cperkins', '_G3\6a8_[WWf>J/p');
+     
