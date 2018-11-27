@@ -4,6 +4,8 @@ Welcome to the github page for our Media Aggregation Platform project. This is a
 
 ## Site Page
 [Click here to visit our page!](http://mediaaggregationplatform-env.bij2vsvze9.us-east-2.elasticbeanstalk.com/)
+## Presentation
+[Click here to view our presentation](https://slides.com/defritz/deck/fullscreen)
 
 ## Team Members
 
