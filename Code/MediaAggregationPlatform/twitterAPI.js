@@ -23,7 +23,7 @@ var getTweets = function getTweets() {
             queryArray.push(query);
 
             client.get('search/tweets', {q: query}, function (error, tweets) {
-                // Get three tweets from the topic
+                // Get three tweets from the selected topic
                 for (j = 0; j < 3; j++) {
                     var user = tweets.statuses[j].user.screen_name;
                     user.replace(/\s+/g, '');
@@ -37,7 +37,6 @@ var getTweets = function getTweets() {
                 }
             });
         }
-
     });
     return topicsTweets;
 }

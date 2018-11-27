@@ -49,7 +49,7 @@ app.post('/', function(req, res) {
     switch(selectVal) {
         case 'twitter':
             res.render('indexTwitter.ejs', {page: 'Home', menuId: 'home',
-                topic1: tweetArray[0][0], topic2: tweetArray[0][1], topic3: tweetArray[0][2],
+                //topic1: tweetArray[0][0], topic2: tweetArray[0][1], topic3: tweetArray[0][2],
                 tweet1: tweetArray[1][0], tweet2: tweetArray[1][1], tweet3: tweetArray[1][2],
                 tweet4: tweetArray[1][3], tweet5: tweetArray[1][4], tweet6: tweetArray[1][5],
                 tweet7: tweetArray[1][6], tweet8: tweetArray[1][7], tweet9: tweetArray[1][8]
