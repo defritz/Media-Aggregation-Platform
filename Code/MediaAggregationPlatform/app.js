@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var twitter = require('./twitterAPI');
 var nytimes = require('./nytimesAPI');
-var youtube = require('./YTAPI');
+//var youtube = require('./YTAPI');
 var spotify = require('./spotifyapi');
 
 var app = express();
@@ -29,12 +29,21 @@ var videosArray;
 var songsArray;
 
 app.get('/', function(req, res) {
-    res.render('indexHome.ejs', {page: 'Home', menuId: 'home'});
+    res.render('login.ejs', {page: 'Login', menuId: 'login'});
+});
+
+app.get('/indexHome', function(req, res) {
+	res.render('indexHome', {page:'Home', menuId:'home'});
     tweetArray = twitter.getTweets();
     newsArray = nytimes.getNews();
-    videosArray = youtube.getVideos();
+    //videosArray = youtube.getVideos();
     songsArray = spotify.getTracks();
 });
+
+app.get('/profile', function(req, res) {
+	res.render('profile', {page:'Profile', menuId:'profile'});
+});
+
 app.post('/', function(req, res) {
     var selectVal = req.body.list;
     switch(selectVal) {
@@ -81,8 +90,8 @@ app.post('/', function(req, res) {
             break;
     }
 });
-app.listen(3000, function(){
-    console.log("Listening on http://localhost:3000");
+app.listen(5000, function(){
+    console.log("Listening on http://localhost:5000");
 })
 
 /*
