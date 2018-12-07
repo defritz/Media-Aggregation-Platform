@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var twitter = require('./twitterAPI');
 var nytimes = require('./nytimesAPI');
-var youtube = require('./YTAPI');
+//var youtube = require('./YTAPI');
 var spotify = require('./spotifyapi');
 
 var app = express();
@@ -36,7 +36,7 @@ app.get('/indexHome', function(req, res) {
 	res.render('indexHome', {page:'Home', menuId:'home'});
     tweetArray = twitter.getTweets();
     newsArray = nytimes.getNews();
-    videosArray = youtube.getVideos();
+    //videosArray = youtube.getVideos();
     songsArray = spotify.getTracks();
 });
 
