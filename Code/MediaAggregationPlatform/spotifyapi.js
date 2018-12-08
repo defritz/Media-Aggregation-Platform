@@ -1,7 +1,7 @@
 var request = require('request'); // "Request" library
 
-var client_id = '3d66ac1c2793421484d1bd58e68c5ab4'; // Your client id
-var client_secret = '55ef9bdab2f948a98c25304532655a5f'; // Your secret
+var client_id = process.env.SPOTIFY_API_KEY; // Your client id
+var client_secret = process.env.SPOTIFY_SECRET_KEY; // Your secret
 
 var oEmbedArray = new Array();
 
@@ -38,11 +38,12 @@ request.post(authOptions, function(error, response, body) {
 });
 
 var getTracks = function getTracks(){
-    oEmbedArray[0] = '<iframe src="https://open.spotify.com/embed/user/spotifycharts/playlist/37i9dQZEVXbLRQDuF5jeBp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-    oEmbedArray[1] = '<iframe src="https://open.spotify.com/embed/user/selahrose726/playlist/3O9SfP3rrfbHFnMKEF0x3C" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-    for (i = 0; i < 2; i++){
-        //console.log(oEmbedArray[i]);
-    }
+    oEmbedArray[0] = '<iframe src="https://open.spotify.com/embed/user/spotifycharts/playlist/37i9dQZEVXbLRQDuF5jeBp" ' +
+        'width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
+    oEmbedArray[1] = '<iframe src="https://open.spotify.com/embed/user/spotifycharts/playlist/37i9dQZEVXbLiRSasKsNU9" ' +
+        'width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>'
+    oEmbedArray[2] = '<iframe src="https://open.spotify.com/embed/user/selahrose726/playlist/3O9SfP3rrfbHFnMKEF0x3C" ' +
+        'width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
     return oEmbedArray;
 }
 

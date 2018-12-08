@@ -1,3 +1,4 @@
+// Module imports
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -28,10 +29,12 @@ var newsArray;
 var videosArray;
 var songsArray;
 
+// Initial render
 app.get('/', function(req, res) {
     res.render('login.ejs', {page: 'Login', menuId: 'login'});
 });
 
+// Homepage render, initial API calls
 app.get('/indexHome', function(req, res) {
 	res.render('indexHome', {page:'Home', menuId:'home'});
     tweetArray = twitter.getTweets();
@@ -40,10 +43,12 @@ app.get('/indexHome', function(req, res) {
     songsArray = spotify.getTracks();
 });
 
+// Profile page render
 app.get('/profile', function(req, res) {
 	res.render('profile', {page:'Profile', menuId:'profile'});
 });
 
+// Submit hook, redirects to specified media page
 app.post('/', function(req, res) {
     var selectVal = req.body.list;
     switch(selectVal) {
@@ -84,8 +89,9 @@ app.post('/', function(req, res) {
         case 'spotify':
             res.render('indexSpotify.ejs', {
                 page: 'Home', menuId: 'home',
-                playlist1: songsArray[0], playlist2: songsArray[1]
+                playlist1: songsArray[0], playlist2: songsArray[1], playlist3: songsArray[2]
             });
+            // Update latest songs
             songsArray = spotify.getTracks();
             break;
     }
@@ -93,23 +99,5 @@ app.post('/', function(req, res) {
 app.listen(5000, function(){
     console.log("Listening on http://localhost:5000");
 })
-
-/*
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
-
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
-*/
 
 module.exports = app;
