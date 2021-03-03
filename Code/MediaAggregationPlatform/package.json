@@ -21,7 +21,7 @@
     "nyt": "^0.1.0",
     "nyt-top": "^1.0.5",
     "oembed": "^0.1.2",
-    "pug": "2.0.0-beta11",
+    "pug": "3.0.1",
     "simple-youtube-api": "^5.1.1",
     "twitter": "^1.7.1"
   },
